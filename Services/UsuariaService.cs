@@ -1,8 +1,9 @@
 ﻿using Dona.Data;
 using Dona.Models;
-using System;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
-using System.Threading.Tasks;
+using System.Linq;
 
 namespace Dona.Services
 {
@@ -15,30 +16,59 @@ namespace Dona.Services
             _dBContext = context;
         }
 
-        public Task<Usuaria> AddUsuaria(Usuaria usuaria)
+        public ActionResult<Usuaria> AddUsuaria(UsuariaDto usuariaDto)
         {
-            throw new NotImplementedException();
+            var usuaria = new Usuaria()
+            {
+                Nome = usuariaDto.Nome,
+                Email = usuariaDto.Email,
+                Senha = usuariaDto.Senha,
+                Telefone = usuariaDto.Telefone,
+                Uf = usuariaDto.Uf,
+                Profissao = usuariaDto.Profissao
+            };
+
+            _dBContext.Usuarias.Add(usuaria);
+            _dBContext.SaveChangesAsync();
+
+            return usuaria;
         }
 
-        public Task<Usuaria> DeleteUsuaria(int id, Usuaria usuaria)
+        public void DeleteUsuaria(int id)
         {
-            throw new NotImplementedException();
+            var usuaria = GetUsuariaById(id);
+            _dBContext.Usuarias.Remove(usuaria.Value);
+            _dBContext.SaveChangesAsync();
         }
 
-        public Task<Usuaria> GetUsuariaById(int id)
+        public ActionResult<Usuaria> GetUsuariaById(int id)
         {
-            throw new NotImplementedException();
+            return _dBContext.Usuarias.Find(id);
         }
 
-        public async Task<List<Usuaria>> ListUsuarias()
+        public ActionResult<List<Usuaria>> ListUsuarias()
         {
-            //List<Usuaria> usuarias = await _dBContext.Usuarias.ToListAsync();
-            return null;
+            List<Usuaria> usuarias = _dBContext.Usuarias.ToList();
+            return usuarias;
         }
 
-        public Task UpdateUsuaria(int id, Usuaria usuaria)
+        public ActionResult<Usuaria> UpdateUsuaria(int id, UsuariaDto usuariaDto)
         {
-            throw new NotImplementedException();
+            var usuaria = new Usuaria()
+            {
+                Id = id,
+                Nome = usuariaDto.Nome,
+                Email = usuariaDto.Email,
+                Senha = usuariaDto.Senha,
+                Telefone = usuariaDto.Telefone,
+                Uf = usuariaDto.Uf,
+                Profissao = usuariaDto.Profissao
+            };
+
+            _dBContext.Entry(usuaria).State = EntityState.Modified;
+            _dBContext.SaveChangesAsync();
+
+            return usuaria;
         }
     }
 }

@@ -1,15 +1,15 @@
 ﻿using Dona.Models;
+using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace Dona.Services
 {
     public interface IUsuariaService
     {
-        Task<List<Usuaria>> ListUsuarias();
-        Task<Usuaria> AddUsuaria(Usuaria usuaria);
-        Task<Usuaria> GetUsuariaById(int id);
-        Task UpdateUsuaria(int id, Usuaria usuaria);
-        Task<Usuaria> DeleteUsuaria(int id, Usuaria usuaria);
+        ActionResult<List<Usuaria>> ListUsuarias();
+        ActionResult<Usuaria> AddUsuaria(UsuariaDto usuaria);
+        ActionResult<Usuaria> GetUsuariaById(int id);
+        ActionResult<Usuaria> UpdateUsuaria(int id, UsuariaDto usuaria);
+        void DeleteUsuaria(int id);
     }
 }

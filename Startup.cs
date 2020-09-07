@@ -23,6 +23,8 @@ namespace Dona
             services.AddControllers();
             services.AddDbContext<SQLiteDBContext>();
             services.AddScoped<IUsuariaService, UsuariaService>();
+            services.AddScoped<IForumService, ForumService>();
+            services.AddScoped<IComentarioService, ComentarioService>();
 
             // Register the Swagger generator, defining 1 or more Swagger documents
             services.AddSwaggerGen();

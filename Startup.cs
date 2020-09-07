@@ -29,6 +29,8 @@ namespace Dona
             services.AddControllers();
             services.AddDbContext<SQLiteDBContext>();
             services.AddScoped<IUsuariaService, UsuariaService>();
+            services.AddScoped<IForumService, ForumService>();
+            services.AddScoped<IComentarioService, ComentarioService>();
 
             var appSettingsSection = Configuration.GetSection("AppSettings");
             services.Configure<AppSettings>(appSettingsSection);

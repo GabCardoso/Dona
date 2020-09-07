@@ -1,6 +1,7 @@
 <h4 align="center">
 
-![logo](Images\Dona.png)
+<img alt="logo" style="height:150px" src="Images/Dona.png">
+
 <p> Encontre mulheres prontas para empreender 👷‍♀️👩‍🏫👩‍💼👩‍🔬 </p>
 
 <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/GabCardoso/Dona?style=flat-square">
@@ -12,10 +13,6 @@
 </h4>
 
 # 👩‍🔬 Overview
+Uma das maiores dificuldades de mulheres que decidem empreender no mercado de tecnologia é encontrar outras representações femininas com os mesmos ideais e habilidades complementares para embarcarem juntas no desenvolvimento de algum projeto.
 
-
-## Tecnologias
-
-### Serviço utilizado
-
-[Serviço IBGE / Localidades](https://servicodados.ibge.gov.br/)
+Uma rede composta apenas por mulheres e para mulheres, com ideia de proporcionar networking entre idealizadoras e investidores e capacitação para as mulheres (roadmap futuro).

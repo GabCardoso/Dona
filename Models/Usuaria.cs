@@ -23,5 +23,7 @@ namespace Dona.Models
         [Required]
         [MaxLength(128)]
         public string Profissao { get; set; }
+        public byte[] SenhaHash { get; set; }
+        public byte[] SenhaSalt { get; set; }
     }
 }

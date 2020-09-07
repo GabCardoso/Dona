@@ -23,7 +23,9 @@ namespace Sensors.Seeds
                         Senha = "12345678",
                         Profissao = "Programadora",
                         Telefone = "21987456254",
-                        Uf = "RJ"
+                        Uf = "RJ",
+                        SenhaHash = System.Text.Encoding.UTF8.GetBytes("senha"),
+                        SenhaSalt = System.Text.Encoding.UTF8.GetBytes("senha")
                     },
                      new Usuaria
                      {
@@ -33,7 +35,9 @@ namespace Sensors.Seeds
                          Senha = "12345678",
                          Profissao = "Analista",
                          Telefone = "21987456254",
-                         Uf = "SP"
+                         Uf = "SP",
+                         SenhaHash = System.Text.Encoding.UTF8.GetBytes("senha"),
+                         SenhaSalt = System.Text.Encoding.UTF8.GetBytes("senha")
                      },
                     new Usuaria
                     {
@@ -43,7 +47,9 @@ namespace Sensors.Seeds
                         Senha = "12345678",
                         Profissao = "Gerente",
                         Telefone = "21987456254",
-                        Uf = "RJ"
+                        Uf = "RJ",
+                        SenhaHash = System.Text.Encoding.UTF8.GetBytes("senha"),
+                        SenhaSalt = System.Text.Encoding.UTF8.GetBytes("senha")
                     },
                     new Usuaria
                     {
@@ -53,7 +59,9 @@ namespace Sensors.Seeds
                         Senha = "12345678",
                         Profissao = "Programadora",
                         Telefone = "21987456254",
-                        Uf = "PR"
+                        Uf = "PR",
+                        SenhaHash = System.Text.Encoding.UTF8.GetBytes("senha"),
+                        SenhaSalt = System.Text.Encoding.UTF8.GetBytes("senha")
                     },
                     new Usuaria
                     {
@@ -63,7 +71,9 @@ namespace Sensors.Seeds
                         Senha = "12345678",
                         Profissao = "Programadora",
                         Telefone = "21987456254",
-                        Uf = "RJ"
+                        Uf = "RJ",
+                        SenhaHash = System.Text.Encoding.UTF8.GetBytes("senha"),
+                        SenhaSalt = System.Text.Encoding.UTF8.GetBytes("senha")
                     },
                     new Usuaria
                     {
@@ -73,7 +83,9 @@ namespace Sensors.Seeds
                         Senha = "12345678",
                         Profissao = "Ux Designer",
                         Telefone = "21987456254",
-                        Uf = "MG"
+                        Uf = "MG",
+                        SenhaHash = System.Text.Encoding.UTF8.GetBytes("senha"),
+                        SenhaSalt = System.Text.Encoding.UTF8.GetBytes("senha")
                     },
                     new Usuaria
                     {
@@ -83,7 +95,9 @@ namespace Sensors.Seeds
                         Senha = "12345678",
                         Profissao = "Designer",
                         Telefone = "21987456254",
-                        Uf = "RJ"
+                        Uf = "RJ",
+                        SenhaHash = System.Text.Encoding.UTF8.GetBytes("senha"),
+                        SenhaSalt = System.Text.Encoding.UTF8.GetBytes("senha")
                     },
                     new Usuaria
                     {
@@ -93,7 +107,9 @@ namespace Sensors.Seeds
                         Senha = "12345678",
                         Profissao = "Engenheira de Civil",
                         Telefone = "21987456254",
-                        Uf = "PR"
+                        Uf = "PR",
+                        SenhaHash = System.Text.Encoding.UTF8.GetBytes("senha"),
+                        SenhaSalt = System.Text.Encoding.UTF8.GetBytes("senha")
                     }
                 );
 

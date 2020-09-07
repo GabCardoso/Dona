@@ -17,7 +17,9 @@ namespace Dona.Migrations
                     Senha = table.Column<string>(maxLength: 128, nullable: false),
                     Telefone = table.Column<string>(maxLength: 128, nullable: true),
                     Uf = table.Column<string>(maxLength: 2, nullable: false),
-                    Profissao = table.Column<string>(maxLength: 128, nullable: false)
+                    Profissao = table.Column<string>(maxLength: 128, nullable: false),
+                    SenhaHash = table.Column<byte[]>(maxLength: 128, nullable: false),
+                    SenhaSalt = table.Column<byte[]>(maxLength: 128, nullable: false)
                 },
                 constraints: table =>
                 {

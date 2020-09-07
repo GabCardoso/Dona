@@ -40,6 +40,11 @@ namespace Dona
 
             app.UseHttpsRedirection();
 
+            app.UseCors(builder => builder
+            .AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader());
+
             // Enable middleware to serve generated Swagger as a JSON endpoint.
             app.UseSwagger();
 

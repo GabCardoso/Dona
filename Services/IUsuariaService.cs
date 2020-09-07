@@ -6,10 +6,11 @@ namespace Dona.Services
 {
     public interface IUsuariaService
     {
-        ActionResult<List<Usuaria>> ListUsuarias();
-        ActionResult<Usuaria> AddUsuaria(UsuariaDto usuaria);
-        ActionResult<Usuaria> GetUsuariaById(int id);
-        ActionResult<Usuaria> UpdateUsuaria(int id, UsuariaDto usuaria);
-        void DeleteUsuaria(int id);
+        ActionResult<List<Usuaria>> ListarUsuarias();
+        ActionResult<UsuariaDto> CriarUsuaria(UsuariaDto usuaria);
+        ActionResult<Usuaria> ObterUsuariaPorId(int id);
+        ActionResult<UsuariaDto> AtualizarUsuaria(int id, UsuariaDto usuaria);
+        void DeletarUsuaria(int id);
+        public Usuaria Autenticar(string email, string senha);
     }
 }
